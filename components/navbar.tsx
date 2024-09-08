@@ -5,59 +5,53 @@ import HackUCFLogo from '@/public/hackucf-logo.svg';
 
 const Navbar = () => {
   return (
-    <header className="p-4 flex justify-between items-center bg-black sticky top-0 z-10">
-      <div className="flex items-center space-x-2 pb-2">
+    <header className="p-4 flex justify-evenly items-center bg-black top-0 z-40 fixed">
+      <div className="hidden md:flex items-center pb-1">
         <Image src={HackUCFLogo} alt="HackUCF Logo" className="w-64" />
       </div>
       <nav className="flex space-x-1 mx-2">
         <Button
           variant="ghost"
-          className="text-white hover:text-[#E6B800] hover:bg-white text-sm font-bold"
+          className="text-white hover:text-black hover:bg-white text-sm "
         >
           About Us
         </Button>
         <Button
           variant="ghost"
-          className="text-white hover:text-[#E6B800] hover:bg-white text-sm font-bold"
+          className="text-white hover:text-black hover:bg-white text-sm "
         >
           Horse Plinko Cyber Challenge
         </Button>
         <Button
           variant="ghost"
-          className="text-white hover:text-[#E6B800] hover:bg-white text-sm font-bold"
+          className="text-white hover:text-black hover:bg-white text-sm "
         >
           WiCyS
         </Button>
         <Button
           variant="ghost"
-          className="text-white hover:text-[#E6B800] hover:bg-white text-sm font-bold"
+          className="text-white hover:text-black hover:bg-white text-sm "
         >
           What's Going On
         </Button>
         <Button
           variant="ghost"
-          className="text-white hover:text-[#E6B800] hover:bg-white text-sm font-bold"
+          className="text-white hover:text-black hover:bg-white text-sm "
         >
           Contact Us
         </Button>
         <Button
           variant="ghost"
-          className="text-white hover:text-[#E6B800] hover:bg-white text-sm font-bold"
+          className="text-white hover:text-black hover:bg-white text-sm "
         >
           Sponsorship
         </Button>
-        <Button
-          variant="ghost"
-          className="text-white hover:text-[#E6B800] hover:bg-white text-sm font-bold"
-        >
-          Join Us
-        </Button>
       </nav>
-      <Button className="group relative overflow-hidden bg-gradient-to-r from-[#D2990B] to-[#dbad3b ] text-white font-semibold text-lg px-6 py-2 transition-all duration-300 ease-in-out hover:scale-105">
-        <span className="text-black relative z-10 transition-colors duration-300 group-hover:text-white font-bold">
-          Discord
-        </span>
-        <span className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 ease-in-out"></span>
+      <Button
+        variant="outline"
+        className="bg-black hover:bg-[#D2990B] hover:text-black border-[#D2990B] text-[#D2990B]"
+      >
+        Join Our Discord
       </Button>
     </header>
   );
