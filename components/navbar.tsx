@@ -5,7 +5,7 @@ import HackUCFLogo from '@/public/hackucf-logo.svg';
 
 const Navbar = () => {
   return (
-    <header className="p-4 flex justify-evenly items-center bg-black top-0 z-40 fixed">
+    <header className="p-4 flex justify-evenly items-center bg-black top-0 z-40 fixed w-full">
       <div className="hidden md:flex items-center pb-1">
         <Image src={HackUCFLogo} alt="HackUCF Logo" className="w-64" />
       </div>
