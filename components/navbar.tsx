@@ -1,7 +1,8 @@
 "use client"
-
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { Menu } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -14,32 +15,35 @@ import {
 } from '@/components/ui/sheet'
 import HackUCFLogo from '../public/hackucf-logo.svg'
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    'About Us',
-    'Horse Plinko Cyber Challenge',
-    'WiCyS',
-    "What's Going On",
-    'Contact Us',
-    'Sponsorship',
+    { name: 'About Us', href: '/about-us' },
+    { name: 'Horse Plinko Cyber Challenge', href: '/horse-plinko' },
+    { name: 'WiCyS', href: '/wicys' },
+    { name: "What's Going On", href: '/whats-going-on' },
+    { name: 'Contact Us', href: '/contact-us' },
+    { name: 'Sponsorship', href: '/sponsorship' },
   ]
 
   return (
     <header className="p-4 flex justify-between items-center bg-black top-0 z-40 fixed w-full">
       <div className="flex items-center pb-1">
-        <Image src={HackUCFLogo} alt="HackUCF Logo" className="w-48 md:w-64" />
+        <Link href="/">
+          <Image src={HackUCFLogo} alt="HackUCF Logo" className="w-48 md:w-64" />
+        </Link>
       </div>
       <nav className="hidden md:flex space-x-1 mx-2">
         {navItems.map((item) => (
-          <Button
-            key={item}
-            variant="ghost"
-            className="text-white hover:text-black hover:bg-white text-sm"
-          >
-            {item}
-          </Button>
+          <Link href={item.href} key={item.name}>
+            <Button
+              variant="ghost"
+              className="text-white hover:text-black hover:bg-white text-sm"
+            >
+              {item.name}
+            </Button>
+          </Link>
         ))}
       </nav>
       <div className="flex items-center space-x-2">
@@ -66,14 +70,15 @@ const Navbar = () => {
             </SheetHeader>
             <div className="flex flex-col space-y-4 mt-8">
               {navItems.map((item) => (
-                <Button
-                  key={item}
-                  variant="ghost"
-                  className="text-white hover:text-black hover:bg-white text-sm justify-start"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item}
-                </Button>
+                <Link href={item.href} key={item.name}>
+                  <Button
+                    variant="ghost"
+                    className="text-white hover:text-black hover:bg-white text-sm justify-start w-full"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Button>
+                </Link>
               ))}
               <Button
                 variant="outline"

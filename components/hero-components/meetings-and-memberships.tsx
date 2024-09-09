@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   Card,
   CardContent,
@@ -8,7 +10,7 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-const MeetingsAndMembership = () => {
+const MeetingsAndMembership: React.FC = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center bg-[#1c1c1c] px-4 py-8 overflow-y-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-fr">

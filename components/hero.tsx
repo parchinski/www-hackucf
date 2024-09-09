@@ -1,12 +1,12 @@
 'use client';
+import React, { useState, useEffect, useCallback } from 'react';
 
-import { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import HackerBg from '@/components/ui/hacker-bg';
 import MeetingsAndMembership from './hero-components/meetings-and-memberships';
 import StayConnected from './hero-components/stay-connected';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMobile, setIsMobile] = useState(false);
 
@@ -81,9 +81,8 @@ const Hero = () => {
             {['home', 'meetings', 'connect'].map((section) => (
               <li key={section}>
                 <button
-                  className={`w-3 h-3 block rounded-full transition-opacity duration-300 ${
-                    activeSection === section ? 'bg-[#D2990B] opacity-100' : 'bg-[#D2990B] opacity-50 hover:opacity-100'
-                  }`}
+                  className={`w-3 h-3 block rounded-full transition-opacity duration-300 ${activeSection === section ? 'bg-[#D2990B] opacity-100' : 'bg-[#D2990B] opacity-50 hover:opacity-100'
+                    }`}
                   aria-label={`Navigate to ${section} section`}
                   onClick={() => scrollToSection(section)}
                 />
