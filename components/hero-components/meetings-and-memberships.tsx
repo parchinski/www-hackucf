@@ -10,27 +10,24 @@ import { Button } from '@/components/ui/button';
 
 const MeetingsAndMembership = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center bg-[#1c1c1c] px-8 pt-8">
-      <h2 className="text-3xl font-bold text-center my-10 text-[#D2990B]">
-        Club Activities
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section className="min-h-screen flex flex-col justify-center bg-[#1c1c1c] px-4 py-8 overflow-y-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-fr">
         {['Meetings', 'Cyber Teams', 'Cyber Games', 'Membership'].map(
           (title, index) => (
             <Card
               key={index}
-              className="bg-black border-[#D2990B] flex flex-col h-full"
+              className="bg-black border-[#D2990B] flex flex-col"
             >
-              <CardHeader>
-                <CardTitle className="text-[#D2990B]">{title}</CardTitle>
+              <CardHeader className="py-3">
+                <CardTitle className="text-[#D2990B] text-lg">{title}</CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow">
-                <CardDescription className="text-white">
+              <CardContent className="flex-grow py-2">
+                <CardDescription className="text-white text-sm">
                   {getDescription(title)}
                 </CardDescription>
               </CardContent>
-              <CardFooter className="mt-auto">
-                <Button className="w-full bg-[#D2990B] hover:bg-[#e6b800] text-black">
+              <CardFooter className="py-3">
+                <Button className="w-full bg-[#D2990B] hover:bg-[#e6b800] text-black text-sm">
                   {getButtonText(title)}
                 </Button>
               </CardFooter>
