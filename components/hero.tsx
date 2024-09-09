@@ -16,7 +16,7 @@ const Hero = () => {
               Collegiate Cyber Defense Club at UCF
             </h1>
             <p className="text-2xl mb-8 text-white font-semibold drop-shadow-[0_3px_2px_rgba(0,0,0,1)] animate-slide-up animation-delay-200">
-              We are the University of Central Florida's only defensive and
+              We are the University of Central Florida&apos;s only defensive and
               offensive cybersecurity student organization.
             </p>
             <Button

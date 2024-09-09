@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
-import HackUCFLogo from '@/public/hackucf-logo.svg';
+import HackUCFLogo from '../public/hackucf-logo.svg';
 
 const Navbar = () => {
   return (
@@ -32,7 +32,7 @@ const Navbar = () => {
           variant="ghost"
           className="text-white hover:text-black hover:bg-white text-sm "
         >
-          What's Going On
+          What&apos;s Going On
         </Button>
         <Button
           variant="ghost"
