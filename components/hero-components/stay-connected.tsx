@@ -10,8 +10,8 @@ const StayConnected = () => {
         </h2>
         <p className="text-center max-w-2xl mx-auto mb-8 text-white">
           You can follow us on social media to stay tuned for job and internship
-          opportunities, or get updated when we hold a meeting. Don&apos;t forget to
-          join our Discord!
+           opportunities, or get updated when we hold a meeting. Don&apos;t forget to
+           join our Discord!
         </p>
         <div className="flex justify-center space-x-6">
           <Button
