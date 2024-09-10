@@ -30,6 +30,7 @@ const MeetingsAndMembership: React.FC = () => {
                   alt="card image"
                   width={340}
                   height={300}
+                  unoptimized
                 />
                 <CardDescription className="text-white text-sm">
                   {getDescription(title)}
