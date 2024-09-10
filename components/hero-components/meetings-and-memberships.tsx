@@ -9,21 +9,28 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import Image from "next/image";
 
 const MeetingsAndMembership: React.FC = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center bg-[#1c1c1c] px-4 py-8 overflow-y-auto">
+    <section className="min-h-screen flex flex-col justify-center bg-black px-4 py-8 overflow-y-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-fr">
         {['Meetings', 'Cyber Teams', 'Cyber Games', 'Membership'].map(
           (title, index) => (
             <Card
               key={index}
-              className="bg-black border-[#D2990B] flex flex-col"
+              className="bg-black border-[#D2990B] flex flex-col mt-12"
             >
               <CardHeader className="py-3">
-                <CardTitle className="text-[#D2990B] text-lg">{title}</CardTitle>
+                <CardTitle className="text-[#D2990B] text-lg font-bold">{title}</CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow py-2">
+              <CardContent className="flex-grow flex flex-col pb-2 justify-top space-y-4">
+                <Image
+                  src={getImageURL(title)}
+                  alt="card image"
+                  width={340}
+                  height={300}
+                />
                 <CardDescription className="text-white text-sm">
                   {getDescription(title)}
                 </CardDescription>
@@ -78,7 +85,7 @@ function getImageURL(title: string) {
     case 'Meetings':
       return '/meetings.jpg';
     case 'Cyber Teams':
-      return '/cyber-teams.jpg';
+      return '/cyber-teams.gif';
     case 'Cyber Games':
       return '/cyber-games.jpg';
     case 'Membership':
