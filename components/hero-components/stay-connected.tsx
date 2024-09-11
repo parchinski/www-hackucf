@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Instagram, Twitter, Github, Linkedin } from 'lucide-react';
 
@@ -10,7 +10,7 @@ const StayConnected: React.FC = () => {
   const router = useRouter();
 
   const handleSocialClick = (url: string) => {
-    router.push(url);
+    window.open(url, '_blank');
   };
 
   return (
