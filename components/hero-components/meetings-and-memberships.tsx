@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   Card,
@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import Image from "next/image";
+import Image from 'next/image';
 
 const MeetingsAndMembership: React.FC = () => {
   return (
@@ -22,7 +22,9 @@ const MeetingsAndMembership: React.FC = () => {
               className="bg-black border-[#D2990B] flex flex-col mt-12"
             >
               <CardHeader className="py-3">
-                <CardTitle className="text-[#D2990B] text-lg font-bold">{title}</CardTitle>
+                <CardTitle className="text-[#D2990B] text-lg font-bold">
+                  {title}
+                </CardTitle>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col pb-2 justify-top space-y-4">
                 <Image
@@ -30,7 +32,6 @@ const MeetingsAndMembership: React.FC = () => {
                   alt="card image"
                   width={340}
                   height={300}
-                  unoptimized
                 />
                 <CardDescription className="text-white text-sm">
                   {getDescription(title)}
@@ -86,7 +87,7 @@ function getImageURL(title: string) {
     case 'Meetings':
       return '/meetings.jpg';
     case 'Cyber Teams':
-      return '/cyber-teams.gif';
+      return '/cyber-teams.jpg';
     case 'Cyber Games':
       return '/cyber-games.jpg';
     case 'Membership':

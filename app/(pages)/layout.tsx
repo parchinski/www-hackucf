@@ -1,8 +1,7 @@
 "use client"
-
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import Footer from '@/components/footer';
-import Navbar from '@/components/navbar';
+import Footer from './_components/footer';
+import Navbar from './_components/navbar';
 
 export default function HomeLayout({
   children,
