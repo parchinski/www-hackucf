@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
         </section>
       </div>
       {!isMobile && (
-        <nav className="fixed bottom-7 left-1/2 transform -translate-x-1/2 z-50">
+        <nav className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
           <ul className="flex space-x-5">
             {['home', 'meetings', 'connect'].map((section) => (
               <li key={section}>

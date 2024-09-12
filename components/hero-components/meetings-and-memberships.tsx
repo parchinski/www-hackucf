@@ -49,7 +49,7 @@ const MeetingsAndMembership: React.FC = () => {
         {CARD_DATA.map((card, index) => (
           <Card
             key={index}
-            className="bg-black border-[#D2990B] flex flex-col mt-12 border-2"
+            className="bg-black border-[#D2990B] flex flex-col mt-12 border-2 pb-3"
           >
             <CardHeader className="py-3">
               <CardTitle className="text-[#D2990B] text-lg font-bold">
