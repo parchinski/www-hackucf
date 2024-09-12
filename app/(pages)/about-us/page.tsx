@@ -135,7 +135,7 @@ export default function AboutUs() {
             Our Aliases
           </h2>
           <p className="mb-4">
-            We go by several names, often depending on context—whether we're
+            We go by several names, often depending on context—whether we&apos;re
             representing ourselves on-campus, for instance, or competing in
             virtual competitions:
           </p>
