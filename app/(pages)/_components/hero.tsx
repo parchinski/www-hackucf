@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
             </p>
             <Button
               variant="outline"
-              className="border-2 bg-black hover:bg-[#D2990B] text-lg hover:text-black border-[#D2990B] text-[#D2990B] rounded-full p-4 animate-slide-up animation-delay-200"
+              className="transition-colors border-2 bg-black hover:bg-[#D2990B] text-lg hover:text-black border-[#D2990B] text-[#D2990B] rounded-full p-4 animate-slide-up animation-delay-200"
               aria-label="Learn more about Collegiate Cyber Defense Club"
               onClick={() => scrollToSection('meetings')}
             >
@@ -76,12 +76,12 @@ const Hero: React.FC = () => {
         </section>
       </div>
       {!isMobile && (
-        <nav className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
+        <nav className="fixed bottom-7 left-1/2 transform -translate-x-1/2 z-50">
           <ul className="flex space-x-5">
             {['home', 'meetings', 'connect'].map((section) => (
               <li key={section}>
                 <button
-                  className={`w-3 h-3 block rounded-full transition-opacity duration-300 ${activeSection === section ? 'bg-[#D2990B] opacity-100' : 'bg-[#D2990B] opacity-50 hover:opacity-100'
+                  className={`w-4 h-4 block rounded-full transition-opacity duration-300 ${activeSection === section ? 'bg-[#D2990B] opacity-100' : 'bg-[#D2990B] opacity-60 hover:opacity-100'
                     }`}
                   aria-label={`Navigate to ${section} section`}
                   onClick={() => scrollToSection(section)}

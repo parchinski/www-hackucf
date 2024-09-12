@@ -1,14 +1,11 @@
 'use client';
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Instagram, Twitter, Github, Linkedin } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 
 const StayConnected: React.FC = () => {
-  const router = useRouter();
-
   const handleSocialClick = (url: string) => {
     window.open(url, '_blank');
   };
@@ -70,7 +67,7 @@ const StayConnected: React.FC = () => {
           <Link href="#" key={index} passHref>
             <Button
               variant="outline"
-              className="bg-black hover:bg-[#D2990B] hover:text-black border-[#D2990B] text-[#D2990B]"
+              className="bg-black hover:bg-[#D2990B] hover:text-black border-[#D2990B] text-[#D2990B] border-2"
             >
               {text}
             </Button>
