@@ -1,0 +1,5 @@
+myNextApplication:
+  component: serverless-next.js
+  inputs:
+    bucketName: bucket-name-decided-on
+
