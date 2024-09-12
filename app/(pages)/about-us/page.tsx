@@ -40,26 +40,26 @@ export default function AboutUs() {
 
   return (
     <main className="bg-black text-white min-h-screen mt-20">
-      <nav className="bg-black border-b border-[#D2990B]/20 py-4">
-        <div className="container mx-auto px-4">
-          <ul className="flex flex-wrap justify-center gap-4">
-            {navLinks.map(link => (
-              <li key={link.name}>
-                <Button
-                  variant="outline"
-                  className="border-2 bg-black hover:bg-[#D2990B] text-lg hover:text-black border-[#D2990B] text-[#D2990B] rounded-full p-4 animate-slide-up animation-delay-200"
-                  asChild
-                >
-                  <Link href={link.href}>{link.name}</Link>
-                </Button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
-
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-5xl font-bold mb-12 text-center">About Us</h1>
+        <h1 className="text-5xl font-bold mb-16 text-center">About Us</h1>
+
+        <nav className="bg-black mb-16">
+          <div className="container mx-auto px-4">
+            <ul className="flex flex-wrap justify-center gap-4">
+              {navLinks.map(link => (
+                <li key={link.name}>
+                  <Button
+                    variant="outline"
+                    className="border-2 bg-black hover:bg-[#D2990B] text-lg hover:text-black border-[#D2990B] text-[#D2990B] rounded-full p-4 animate-slide-up animation-delay-200"
+                    asChild
+                  >
+                    <Link href={link.href}>{link.name}</Link>
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
 
         <section className="mb-16">
           <h2 className="text-3xl font-semibold mb-4 text-[#D2990B]">
@@ -135,9 +135,9 @@ export default function AboutUs() {
             Our Aliases
           </h2>
           <p className="mb-4">
-            We go by several names, often depending on context—whether we&apos;re
-            representing ourselves on-campus, for instance, or competing in
-            virtual competitions:
+            We go by several names, often depending on context—whether
+            we&apos;re representing ourselves on-campus, for instance, or
+            competing in virtual competitions:
           </p>
           <ul className="list-disc list-inside space-y-2 ml-4">
             <li>Hack@UCF</li>
@@ -159,19 +159,19 @@ export default function AboutUs() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {partnerLinks.map((ally, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-black border border-[#D2990B] p-4 rounded-lg hover:bg-[#D2990B] transition-colors group"
+                href={ally.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
               >
-                <Link
-                  href={ally.href}
-                  className="text-[#D2990B] group-hover:text-black transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {ally.name}
-                </Link>
-              </div>
+                <div className="bg-black border-2 border-[#D2990B] p-4 rounded-lg hover:bg-[#D2990B] transition-colors group">
+                  <span className="text-[#D2990B] group-hover:text-black transition-colors">
+                    {ally.name}
+                  </span>
+                </div>
+              </Link>
             ))}
           </div>
         </section>
