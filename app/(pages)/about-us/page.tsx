@@ -13,14 +13,15 @@ export default function AboutUs() {
   ];
 
   const partnerLinks = [
-    { name: 'Knight Hacks', href: 'https://club.knighthacks.org/' },
-    { name: 'Hack Evergreen', href: 'http://hackevergreen.org/' },
+    { name: 'Citrussec', href: 'https://www.citrussec.com/' },
+    { name: 'KnightHacks', href: 'https://club.knighthacks.org/' },
     {
       name: 'Cybersecurity Club @ FSU',
-      href: 'https://cybersecurity.fsu.edu/',
+      href: 'https://cybersecurity.fsu.edu/club/',
     },
-    { name: "USF's WhiteHatters", href: 'https://www.wcsc.usf.edu/' },
-    { name: "UF's Kernel Sanders", href: 'http://ufsit.org/' },
+    { name: "USF's WhiteHatters", href: 'https://wcsc.info/' },
+    { name: "UF's Kernel Sanders", href: 'https://ufsit.club/' },
+    { name: "Florida Polytechnic's Cyber Club ", href: 'https://floridapoly.presence.io/organization/cybersecurity-club' },
     { name: 'CyberPatriot', href: 'https://www.uscyberpatriot.org/home' },
     {
       name: 'Florida Cyber Alliance',
@@ -30,7 +31,7 @@ export default function AboutUs() {
       name: '(ISC)² Central Florida Chapter',
       href: 'https://isc2orlando.org/',
     },
-    { name: 'OWASP Orlando', href: 'https://www.owasp.org/index.php/Orlando' },
+    { name: 'OWASP Orlando', href: 'https://owasp.org/www-chapter-orlando/' },
     { name: 'SPARSA', href: 'https://www.sparsa.org/' },
     {
       name: 'Electronic Frontier Alliance',
